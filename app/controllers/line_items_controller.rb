@@ -1,4 +1,5 @@
 class LineItemsController < ApplicationController
+  skip_before_action :authorize, only: :create
   include CurrentCart #引入之前定义的公共方法
   before_action :set_cart, only: [:create]  #在进行create动作之前,调用该公告方法
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
