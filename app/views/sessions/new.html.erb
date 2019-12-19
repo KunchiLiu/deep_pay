@@ -18,7 +18,8 @@
       </div>
 
       <div>
-        <%= submit_tag "Login" %>
+        <%= submit_tag "Login" %> <%= link_to '<button class="btn btn-primary btn-lg" type="button">Sign in</button>'.html_safe, new_user_path %>
+        <%# <%= link_to '<button class="btn btn-primary btn-lg" type="button">New Post</button>'.html_safe, product_path %>
       </div>
     </fieldset>
   <% end %>
