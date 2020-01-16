@@ -14,20 +14,20 @@
   <% end %>
 
 <fieldset>
-<legend>Enter User Details</legend>
+<legend>请输入注册信息</legend>
 
   <div class="field">
-    <%= f.label :name, 'Name:' %>
+    <%= f.label :name, '姓名:' %>
     <%= f.text_field :name, size: 40 %>
   </div>
 
   <div class="field">
-    <%= f.label :password, 'Password:' %>
+    <%= f.label :password, '密码:' %>
     <%= f.password_field :password, size: 40 %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation, 'Confirm:' %>
+    <%= f.label :password_confirmation, '验证密码:' %>
     <%= f.password_field :password_confirmation, size: 40 %>
   </div>
 

@@ -5,22 +5,23 @@
 
   <%= form_tag do %>
     <fieldset>
-      <legend>Please Log In</legend>
+      <legend>请登录</legend>
 
       <div>
-        <%= label_tag :name, 'Name:' %>
+        <%= label_tag :name, '姓名：' %>
         <%= text_field_tag :name, params[:name] %>
       </div>
 
       <div>
-        <%= label_tag :password, 'Password:' %>
+        <%= label_tag :password, '密码：' %>
         <%= password_field_tag :password, params[:password] %>
       </div>
-
+      
       <div>
-        <%= submit_tag "Login" %> <%= link_to '<button class="btn btn-primary btn-lg" type="button">Sign in</button>'.html_safe, new_user_path %>
-        <%# <%= link_to '<button class="btn btn-primary btn-lg" type="button">New Post</button>'.html_safe, product_path %>
+        <%= button_to("登录") %>
+        <%= button_to('注册', new_user_path, method: :get) %>
       </div>
+      
     </fieldset>
   <% end %>
 </div>

@@ -15,7 +15,8 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
 
     get "/"
     assert_response :success
-    assert_select 'h1', "Your Pragmatic Catalog"
+    # assert_select 'h1', "Your Pragmatic Catalog"
+    assert_select 'h1', "商品列表"
     
     post '/line_items', params: { product_id: ruby_book.id }, xhr: true
     assert_response :success 
@@ -41,7 +42,8 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
       follow_redirect!
 
       assert_response :success
-      assert_select 'h1', "Your Pragmatic Catalog"
+      # assert_select 'h1', "Your Pragmatic Catalog"
+      assert_select 'h1', "商品列表"
       cart = Cart.find(session[:cart_id])
       assert_equal 0, cart.line_items.size
     
